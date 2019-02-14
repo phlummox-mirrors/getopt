@@ -1,3 +1,30 @@
+// getopt is a POSIX-compatible implementation of getopt(3) for Go.
+// 
+// Example usage:
+//
+//		import (
+//			"os"
+//			"git.sr.ht/~sircmpwn/getopt"
+//		)
+//		
+//		func main() {
+//			opts, optind, err := getopt.Getopts(os.Args[1:], "abc:d:")
+//			if err != nil {
+//				panic(err)
+//			}
+//			for _, opt := range opts {
+//				switch opt.Option {
+//				case 'a':
+//					println("Option -a specified")
+//				case 'b':
+//					println("Option -b specified")
+//				case 'c':
+//					println("Option -c specified: " + opt.Value)
+//				case 'c':
+//					println("Option -c specified: " + opt.Value)
+//				}
+//			}
+//		}
 package getopt
 
 import (
