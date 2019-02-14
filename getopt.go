@@ -24,7 +24,7 @@
 //					println("Option -c specified: " + opt.Value)
 //				}
 //			}
-//          println("Remaining arguments:")
+//			println("Remaining arguments:")
 //			for _, arg := os.Args[optind:] {
 //				println(arg)
 //			}
