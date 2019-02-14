@@ -20,6 +20,18 @@ func TestSimpleCase(t *testing.T) {
 	assert.Equal(opts[2], Option{'o', "output-file"})
 }
 
+func TestShortFormArgument(t *testing.T) {
+	assert := assert.New(t)
+	opts, i, err := Getopts([]string{
+		"-afooutput-file", "normal arg"}, "afo:")
+	assert.Nil(err, "Expected err to be nil")
+	assert.Equal(len(opts), 3, "Expected 3 options to be parsed")
+	assert.Equal(i, 1, "Expected non-option args to start at index 1")
+	assert.Equal(opts[0], Option{'a', ""})
+	assert.Equal(opts[1], Option{'f', ""})
+	assert.Equal(opts[2], Option{'o', "output-file"})
+}
+
 func TestSeparateArgs(t *testing.T) {
 	assert := assert.New(t)
 	opts, i, err := Getopts([]string{
