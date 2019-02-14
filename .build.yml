@@ -2,8 +2,8 @@ image: alpine/edge
 packages:
 - go
 sources:
-- https://git.sr.ht/~sircmpwn/godoc
+- https://git.sr.ht/~sircmpwn/getopt
 tasks:
 - test: |
-    cd godoc
+    cd getopt
     go test
