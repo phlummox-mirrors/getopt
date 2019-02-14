@@ -32,7 +32,7 @@ func main() {
 		}
 	}
 	println("Remaining arguments:")
-	for _, arg := os.Args[optind:] {
+	for _, arg := range os.Args[optind:] {
 		println(arg)
 	}
 }
