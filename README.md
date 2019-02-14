@@ -27,8 +27,8 @@ func main() {
 			println("Option -b specified")
 		case 'c':
 			println("Option -c specified: " + opt.Value)
-		case 'c':
-			println("Option -c specified: " + opt.Value)
+		case 'd':
+			println("Option -d specified: " + opt.Value)
 		}
 	}
 	println("Remaining arguments:")
