@@ -1,0 +1,9 @@
+image: alpine/edge
+packages:
+- go
+sources:
+- https://git.sr.ht/~sircmpwn/godoc
+tasks:
+- test: |
+    cd godoc
+    go test
