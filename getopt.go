@@ -2,33 +2,33 @@
 // 
 // Example usage:
 //
-//		import (
-//			"os"
-//			"git.sr.ht/~sircmpwn/getopt"
-//		)
-//		
-//		func main() {
-//			opts, optind, err := getopt.Getopts(os.Args[1:], "abc:d:")
-//			if err != nil {
-//				panic(err)
-//			}
-//			for _, opt := range opts {
-//				switch opt.Option {
-//				case 'a':
-//					println("Option -a specified")
-//				case 'b':
-//					println("Option -b specified")
-//				case 'c':
-//					println("Option -c specified: " + opt.Value)
-//				case 'c':
-//					println("Option -c specified: " + opt.Value)
-//				}
-//			}
-//			println("Remaining arguments:")
-//			for _, arg := os.Args[optind:] {
-//				println(arg)
+//	import (
+//		"os"
+//		"git.sr.ht/~sircmpwn/getopt"
+//	)
+//	
+//	func main() {
+//		opts, optind, err := getopt.Getopts(os.Args[1:], "abc:d:")
+//		if err != nil {
+//			panic(err)
+//		}
+//		for _, opt := range opts {
+//			switch opt.Option {
+//			case 'a':
+//				println("Option -a specified")
+//			case 'b':
+//				println("Option -b specified")
+//			case 'c':
+//				println("Option -c specified: " + opt.Value)
+//			case 'c':
+//				println("Option -c specified: " + opt.Value)
 //			}
 //		}
+//		println("Remaining arguments:")
+//		for _, arg := os.Args[optind:] {
+//			println(arg)
+//		}
+//	}
 package getopt
 
 import (
