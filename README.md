@@ -15,7 +15,7 @@ import (
 )
 
 func main() {
-	opts, optind, err := getopt.Getopts(os.Args[1:], "abc:d:")
+	opts, optind, err := getopt.Getopts(os.Args, "abc:d:")
 	if err != nil {
 		panic(err)
 	}

@@ -82,7 +82,7 @@ func Getopts(argv []string, spec string) ([]Option, int, error) {
 		i    int
 		opts []Option
 	)
-	for i = 0; i < len(argv); i++ {
+	for i = 1; i < len(argv); i++ {
 		arg := argv[i]
 		runes = []rune(arg)
 		if len(arg) == 0 || arg == "-" {
