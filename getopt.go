@@ -29,6 +29,37 @@
 //			println(arg)
 //		}
 //	}
+
+// A flag[0]-like interface is also supported.
+//
+//	import (
+// 		"git.sr.ht/~sircmpwn/getopt"
+// 	)
+//
+// 	func main() {
+// 		a := getopt.Bool("a", false, "turn on option a")
+// 		b := getopt.Int("b", 1, "set b to a numerical value")
+// 		var opt string
+// 		getopt.StringVar(&opt, "c", "", "let c be specified string")
+//
+// 		err := getopt.Parse()
+// 		if err != nil {
+// 			panic(err)
+// 		}
+//
+// 		print("Value of a: ")
+// 		println(*a)
+// 		print("Value of b: ")
+// 		println(*b)
+// 		println("Value of c: " + opt)
+//
+// 		println("Remaining arguments:")
+// 		for _, arg := range getopt.Args() {
+// 			println(arg)
+// 		}
+// 	}
+//
+// [0]: https://golang.org/pkg/flag/
 package getopt
 
 import (
