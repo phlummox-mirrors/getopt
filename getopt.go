@@ -29,7 +29,7 @@
 //			println(arg)
 //		}
 //	}
-
+//
 // A flag[0]-like interface is also supported.
 //
 //	import (
