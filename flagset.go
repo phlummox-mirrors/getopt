@@ -55,9 +55,9 @@ func NewFlagSet(name string, err flag.ErrorHandling) *FlagSet {
 	}
 	set.Usage = func() {
 		if set.name != "" {
-			fmt.Fprintf(set.output, "Usage of %s:\n", set.name)
+			fmt.Fprintf(set.output, "Usage of %s:\n\n", set.name)
 		} else {
-			fmt.Fprintf(set.output, "Usage:\n")
+			fmt.Fprintf(set.output, "Usage:\n\n")
 		}
 		set.PrintDefaults()
 	}
@@ -221,15 +221,16 @@ func (set *FlagSet) PrintDefaults() {
 		fmt.Fprintf(out, "  -%c", flag.Rune)
 
 		val := flag.Value
+
+		usage := strings.Replace(flag.Usage, "\n", "\n    \t", -1)
+		fmt.Fprintf(out, "\t%s", usage)
+
 		if _, ok := val.(*stringVal); ok {
 			fmt.Fprintf(out, " (default %q)", val)
 		} else if _, ok := val.(*boolVal); !ok {
 			fmt.Fprintf(out, " (default %s)", val)
 		}
 		fmt.Fprintf(out, "\n")
-
-		usage := strings.Replace(flag.Usage, "\n", "\n    \t", -1)
-		fmt.Fprintf(out, "\t%s\n", usage)
 	})
 }
 
