@@ -144,6 +144,7 @@ func (set *FlagSet) Parse() (err error) {
 		case flag.PanicOnError:
 			panic(err)
 		case flag.ExitOnError:
+			fmt.Println(err)
 			os.Exit(2)
 		}
 	}
