@@ -134,11 +134,11 @@ func (set *FlagSet) Parsed() bool {
 	return set.parsed
 }
 
-// Parse parses the command-line flags from os.Args. Must be called
+// ParseSlice parses the command-line flags from args. Must be called
 // after all flags are defined and before flags are accessed by the
 // program.
-func (set *FlagSet) Parse() (err error) {
-	err = set.parse(os.Args)
+func (set *FlagSet) ParseSlice(args []string) (err error) {
+	err = set.parse(args)
 	if err != nil {
 		switch set.errorHandling {
 		case flag.PanicOnError:
@@ -149,6 +149,13 @@ func (set *FlagSet) Parse() (err error) {
 		}
 	}
 	return
+}
+
+// Parse parses the command-line flags from os.Args. Must be called
+// after all flags are defined and before flags are accessed by the
+// program.
+func (set *FlagSet) Parse() error {
+	return set.ParseSlice(os.Args)
 }
 
 // ErrorHandling returns the error handling behavior of the flag set.
