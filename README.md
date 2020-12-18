@@ -1,4 +1,4 @@
-# getopt [![godoc](https://godoc.org/git.sr.ht/~sircmpwn/getopt?status.svg)](https://godoc.org/git.sr.ht/~sircmpwn/getopt) [![builds.sr.ht status](https://builds.sr.ht/~sircmpwn/getopt.svg)](https://builds.sr.ht/~sircmpwn/getopt)
+# getopt [![godoc](https://godocs.io/git.sr.ht/~sircmpwn/getopt?status.svg)](https://godocs.io/git.sr.ht/~sircmpwn/getopt) [![builds.sr.ht status](https://builds.sr.ht/~sircmpwn/getopt.svg)](https://builds.sr.ht/~sircmpwn/getopt)
 
 A POSIX-compatible getopt implementation for Go, because POSIX getopt is The
 Correct Way to interpret arguments to command line utilities.
